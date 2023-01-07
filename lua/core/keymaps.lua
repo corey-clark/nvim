@@ -31,6 +31,7 @@ vim.keymap.set('n', '<leader>c', '"*y<cr>')
 vim.keymap.set('n', '<leader>zi', ':tabnew %<cr>')
 vim.keymap.set('n', '<leader>zo', ':tabclose<cr>')
 
+-- toggle lsp virtual text
 vim.keymap.set('n', '<leader>tvt', '<Plug>(toggle-lsp-diag-vtext)')
 
 -- Remove highlight after search with :H
