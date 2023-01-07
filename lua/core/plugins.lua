@@ -13,12 +13,12 @@ local packer_bootstrap = ensure_packer()
 
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
-  
+
   -- Navigate between vim and tmux panes
   -- Without this you'll get stuck in vim
   -- from inside tmux
   use 'christoomey/vim-tmux-navigator'
-  
+
   -- Fuzzy file finder with preview
   -- We use this package instead of others
   -- like ctrl+p because it ignores node modules
@@ -32,7 +32,7 @@ return require('packer').startup(function(use)
   -- Our chosen theme and color scheme
   --use 'vim-scripts/xoria256.vim'
   use 'cocopon/iceberg.vim'
-	
+
   -- Our file explorer of choice
   use 'preservim/nerdtree'
 
@@ -53,16 +53,16 @@ return require('packer').startup(function(use)
   use 'airblade/vim-gitgutter'
   use 'Xuyuanp/nerdtree-git-plugin'
   use 'zivyangll/git-blame.vim'
-  
+
   -- highlight yanks
   use 'machakann/vim-highlightedyank'
 
   -- Git blame inline with source code
   use 'APZelos/blamer.nvim'
-  
+
   -- Allow . to be used to repeat last command
   use 'tpope/vim-repeat'
-  
+
   -- Auto pair parens and tags
   use 'jiangmiao/auto-pairs'
   use 'Valloric/MatchTagAlways'
@@ -72,7 +72,7 @@ return require('packer').startup(function(use)
 
   -- Ast for file changes - great if you need to go back in time
   use'mbbill/undotree'
-	
+
   -- nnn file manager with vim commands
   use {
     "luukvbaal/nnn.nvim",
@@ -102,7 +102,7 @@ use {
     {'rafamadriz/friendly-snippets'},
   }
 }
-	
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
