@@ -85,6 +85,9 @@ return require('packer').startup(function(use)
   -- Toggle lsp virtual text
   use 'WhoIsSethDaniel/toggle-lsp-diagnostics.nvim'
 
+  -- post install (yarn install | npm install) then load plugin only for editing supported files
+  use ('prettier/vim-prettier', { run = 'yarn install --frozen-lockfile --production' })
+
   -- lsp zero config / this replaces coc
   use {
     'VonHeikemen/lsp-zero.nvim',

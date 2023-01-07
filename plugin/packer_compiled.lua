@@ -240,6 +240,11 @@ _G.packer_plugins = {
     path = "/Users/coreyclark/.local/share/nvim/site/pack/packer/start/vim-highlightedyank",
     url = "https://github.com/machakann/vim-highlightedyank"
   },
+  ["vim-prettier"] = {
+    loaded = true,
+    path = "/Users/coreyclark/.local/share/nvim/site/pack/packer/start/vim-prettier",
+    url = "https://github.com/prettier/vim-prettier"
+  },
   ["vim-repeat"] = {
     loaded = true,
     path = "/Users/coreyclark/.local/share/nvim/site/pack/packer/start/vim-repeat",
