@@ -88,6 +88,7 @@ return require('packer').startup(function(use)
   -- post install (yarn install | npm install) then load plugin only for editing supported files
   use ('prettier/vim-prettier', { run = 'yarn install --frozen-lockfile --production' })
 
+  -- creates a pop up preview instead of jumping to definition
   use {
     'rmagatti/goto-preview',
     config = function()
