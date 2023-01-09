@@ -17,6 +17,9 @@ vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 vim.opt.undofile = true
 vim.opt.incsearch = true
 
+-- copy yanks to system clipboard
+vim.opt.clipboard = 'unnamed'
+
 -- open :vsplit to the right
 -- this is great for gd (go to defenition)
 vim.opt.splitright = true
@@ -25,11 +28,6 @@ vim.keymap.set('i', 'jj', '<esc>')
 
 -- Save and close with ,w
 vim.keymap.set('n', '<leader>w', ':w!<cr>')
-
--- Yank from vim to clipboard
--- for some reason it doesn't copy
--- until the next key stroke 🤷
-vim.keymap.set('n', '<leader>c', '"*y<cr>')
 
 -- Zoom a split window into a tab and or close it
 vim.keymap.set('n', '<leader>zi', ':tabnew %<cr>')
