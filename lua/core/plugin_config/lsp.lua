@@ -1,7 +1,4 @@
 local lsp = require('lsp-zero')
-lsp.preset('recommended')
-
-local lsp = require("lsp-zero")
 
 lsp.preset("recommended")
 
@@ -35,7 +32,8 @@ lsp.set_preferences({
 lsp.on_attach(function(client, bufnr)
   local opts = {buffer = bufnr, remap = false}
 
-  vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
+  --vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
+  vim.keymap.set('n', 'gd', ':vsplit | lua vim.lsp.buf.definition()<CR>', opts)
 end)
 
 lsp.setup()

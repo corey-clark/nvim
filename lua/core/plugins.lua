@@ -88,6 +88,16 @@ return require('packer').startup(function(use)
   -- post install (yarn install | npm install) then load plugin only for editing supported files
   use ('prettier/vim-prettier', { run = 'yarn install --frozen-lockfile --production' })
 
+  use {
+    'rmagatti/goto-preview',
+    config = function()
+      require('goto-preview').setup {
+        height = 35;
+        default_mappings = true;
+      }
+    end
+  }
+
   -- lsp zero config / this replaces coc
   use {
     'VonHeikemen/lsp-zero.nvim',

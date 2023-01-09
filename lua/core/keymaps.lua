@@ -17,6 +17,10 @@ vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 vim.opt.undofile = true
 vim.opt.incsearch = true
 
+-- open :vsplit to the right
+-- this is great for gd (go to defenition)
+vim.opt.splitright = true
+
 vim.keymap.set('i', 'jj', '<esc>')
 
 -- Save and close with ,w
