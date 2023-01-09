@@ -1,8 +1,8 @@
 local cmp = require('cmp')
 local luasnip = require('luasnip')
 
--- custom mappings for lsp auto complete
--- this allows us to use tab for completion and jk vim bindings
+-- Custom mappings for lsp auto complete
+-- This allows us to use tab for completion and jk vim bindings
 -- to move around suggestion popup list
 
 local check_back_space = function()

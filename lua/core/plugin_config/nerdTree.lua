@@ -3,5 +3,5 @@ vim.keymap.set('n', '<c-v>', ':NERDTreeFind<cr>')
 
 vim.g.NERDTreeShowHidden = 1
 
--- close nerdtree when we open a file
+-- Close nerdtree when we open a file
 vim.g.NERDTreeQuitOnOpen = 1
