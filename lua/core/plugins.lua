@@ -1,3 +1,5 @@
+-- copy/paste from packer bootstrapping
+-- https://github.com/wbthomason/packer.nvim#bootstrapping
 local ensure_packer = function()
   local fn = vim.fn
   local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
@@ -11,6 +13,7 @@ end
 
 local packer_bootstrap = ensure_packer()
 
+-- Declare are plugins here
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
 
@@ -20,12 +23,8 @@ return require('packer').startup(function(use)
   use 'christoomey/vim-tmux-navigator'
 
   -- Fuzzy file finder with preview
-  -- We use this package instead of others
-  -- like ctrl+p because it ignores node modules
-  -- by default
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.0',
-    -- or                          , branch = '0.1.x',
     requires = { {'nvim-lua/plenary.nvim'} }
   }
 
@@ -33,10 +32,8 @@ return require('packer').startup(function(use)
   use {'nvim-telescope/telescope-fzf-native.nvim', run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
 
   -- Our chosen theme and color scheme
-  --use 'vim-scripts/xoria256.vim'
   use 'cocopon/iceberg.vim'
 
-  -- Our file explorer of choice
   use 'preservim/nerdtree'
 
   -- File and Folder Icons
@@ -45,7 +42,7 @@ return require('packer').startup(function(use)
   -- Comment out code with a shortcut
   use 'scrooloose/nerdcommenter'
 
-  -- short cut to swap window split locations
+  -- Shortcut to swap window split locations
   use 'wesQ3/vim-windowswap'
 
   -- HTML emmet support
@@ -57,7 +54,7 @@ return require('packer').startup(function(use)
   use 'Xuyuanp/nerdtree-git-plugin'
   use 'zivyangll/git-blame.vim'
 
-  -- highlight yanks
+  -- Highlight yanks
   use 'machakann/vim-highlightedyank'
 
   -- Git blame inline with source code
@@ -70,10 +67,10 @@ return require('packer').startup(function(use)
   use 'jiangmiao/auto-pairs'
   use 'Valloric/MatchTagAlways'
 
-  -- syntax highlighting and indenting
+  -- Syntax highlighting and indenting
   use ('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 
-  -- Ast for file changes - great if you need to go back in time
+  -- Allow undo changes even after closing and reopening a file
   use'mbbill/undotree'
 
   -- nnn file manager with vim commands
@@ -82,13 +79,14 @@ return require('packer').startup(function(use)
      config = function() require("nnn").setup() end
   }
 
-  -- Toggle lsp virtual text
+  -- Toggle lsp virtual text on and off
+  -- Helpful when inline error message get noisy
   use 'WhoIsSethDaniel/toggle-lsp-diagnostics.nvim'
 
-  -- post install (yarn install | npm install) then load plugin only for editing supported files
   use ('prettier/vim-prettier', { run = 'yarn install --frozen-lockfile --production' })
 
-  -- creates a pop up preview instead of jumping to definition
+  -- Enables a pop up preview so you don't always
+  -- need to jump to definition
   use {
     'rmagatti/goto-preview',
     config = function()
@@ -99,7 +97,7 @@ return require('packer').startup(function(use)
     end
   }
 
-  -- lsp zero config / this replaces coc
+  -- lsp zero config - this replaced the need for c.o.c.
   use {
     'VonHeikemen/lsp-zero.nvim',
     requires = {

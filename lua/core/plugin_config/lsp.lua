@@ -19,6 +19,7 @@ lsp.configure('sumneko_lua', {
     }
 })
 
+-- Adds icons to git gutter - left of line numbers
 lsp.set_preferences({
     suggest_lsp_servers = false,
     sign_icons = {
@@ -32,12 +33,14 @@ lsp.set_preferences({
 lsp.on_attach(function(client, bufnr)
   local opts = {buffer = bufnr, remap = false}
 
-  --vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
+  -- Use :vsplit to open new file when jumping to defenition
   vim.keymap.set('n', 'gd', ':vsplit | lua vim.lsp.buf.definition()<CR>', opts)
 end)
 
 lsp.setup()
 
+-- Enable lsp virtual text
+-- This will display error messages inline
 vim.diagnostic.config({
     virtual_text = true,
 })
