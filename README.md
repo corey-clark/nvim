@@ -8,3 +8,10 @@ My NeoVim Complete Setup
 - You will also need to install Node via NVM for JS related servers to work
 - Tip: add the nvm config to a .zshrc file (not .zshenv file)
 - If errors occure run :MasonLog to check the error logs
+
+## fonts
+
+- You'll need to install fonts for icons to show up in your vim IDE
+- You can install Nerd font for example with brew
+- Then move the font files from `/opt/homebrew/Caskroom/font-hack-nerd-font` to /Users/<username>/Library/Fonts
+- Then open the terminal settings and change the default font to your downloaded font
