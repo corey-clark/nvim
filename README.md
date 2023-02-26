@@ -13,5 +13,5 @@ My NeoVim Complete Setup
 
 - You'll need to install fonts for icons to show up in your vim IDE
 - You can install Nerd font for example with brew
-- Then move the font files from `/opt/homebrew/Caskroom/font-hack-nerd-font` to /Users/<username>/Library/Fonts
+- Then move the font files from `/opt/homebrew/Caskroom/font-hack-nerd-font` to `/Users/<username>/Library/Fonts`
 - Then open the terminal settings and change the default font to your downloaded font
