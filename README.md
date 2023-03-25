@@ -5,6 +5,7 @@ My NeoVim Complete Setup
 - Inside ~/.config directory pull down the repo
 - cd into nvim folder and open it with neovim e.g. nvim command
 - Plugins should begin to install automagically.
+- cp the tmux config example file as a dot file to the root of your machine e.g. cp tmux-config-example ~/.tmux.config
 - You will also need to install Node via NVM for JS related servers to work
 - Tip: add the nvm config to a .zshrc file (not .zshenv file)
 - If errors occure run :MasonLog to check the error logs
